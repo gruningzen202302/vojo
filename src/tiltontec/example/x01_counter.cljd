@@ -29,6 +29,12 @@
              (text {:style (p/TextStyle .color m.Colors/blue
                                         .fontSize 40.0)}
                    message)
+             (text {:style (p/TextStyle .fontSize 40.0)} "Original Number")
+             (text {:style (p/TextStyle .fontSize 40.0)} "000")
+             (text {:style (p/TextStyle .fontSize 40.0)} "Binary Number")
+             (text {:style (p/TextStyle .fontSize 40.0)} "000")
+             (text {:style (p/TextStyle .fontSize 40.0)} "Shifted Number")
+             (text {:style (p/TextStyle .fontSize 40.0)} "000")
              (sized-box {:height 14.0})
              (text
               {:style (in-my-context [me ctx]

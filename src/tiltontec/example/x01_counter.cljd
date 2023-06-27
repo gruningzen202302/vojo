@@ -42,7 +42,7 @@
              (text {:style (p/TextStyle 
                             .color m.Colors/red
                             .fontSize 40.0)} "002")
-             (text {:style (p/TextStyle .fontSize 40.0)} "Shifted Number")
+             (text {:style (p/TextStyle .fontSize 40.0)} "Shifted Numbers")
              (text {:style (p/TextStyle .fontSize 40.0)} "003")
              (sized-box {:height 14.0})
              (text

@@ -9,7 +9,7 @@
             center column text sized-box]]))
 
 (def title-message "VOJO by QiMono")
-(def message "Click on PLUS to increment the counter")
+(def message "Shift Left << ")
 (defn make-app []
   (material-app
    {:title "Flutter/MX Counter Demo"

@@ -52,3 +52,11 @@ cljs꞉user-activate꞉> 
 clj꞉tiltontec.example.x01-counter꞉> 
 #'tiltontec.example.x01-counter/message
 clj꞉tiltontec.example.x01-counter꞉> 
+#'tiltontec.example.x01-counter/original-number
+clj꞉tiltontec.example.x01-counter꞉> 
+; Could not resolve symbol: Integer/toBinaryString
+clj꞉tiltontec.example.x01-counter꞉> 
+#'tiltontec.example.x01-counter/original-number
+clj꞉tiltontec.example.x01-counter꞉> 
+; Could not resolve symbol: Integer/toBinaryString
+clj꞉tiltontec.example.x01-counter꞉> 

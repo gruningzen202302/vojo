@@ -27,7 +27,7 @@
     (center
      (column {:mainAxisAlignment m.MainAxisAlignment/center}
              (text {:style (p/TextStyle .color m.Colors/blue
-                                        .fontSize 20.0)}
+                                        .fontSize 40.0)}
                    message)
              (sized-box {:height 14.0})
              (text

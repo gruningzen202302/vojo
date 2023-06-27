@@ -4,6 +4,7 @@ export PATH="$PATH:`pwd`/bin"
 cd ~/source/repos/vojo
 flutter --version
 flutter doctor
+open -a Simulator
 clj -M:cljd init --org com.tiltontec
 flutter devices
 clj -M:cljd flutter -d B937EE14-0606-4A09-9D6F-13719A31A005

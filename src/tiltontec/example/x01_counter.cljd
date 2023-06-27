@@ -9,8 +9,10 @@
             center column text sized-box]]))
 
 (def title-message "VOJO by QiMono")
-(def message "Shift Left << ")
-(def original-number 4)
+(def message "Bit Demo")
+(def original-number 2r100)
+(def second-number (bit-shift-left original-number 1))
+(def third-number (bit-shift-left 1 16))
 ;(defn toBinaryString [n](Integer/toBinaryString n))
 ;(toBinaryString original-number)
 ;(Integer/toBinaryString original-number)
@@ -34,16 +36,19 @@
              (text {:style (p/TextStyle .color m.Colors/blue
                                         .fontSize 40.0)}
                    message)
-             (text {:style (p/TextStyle .fontSize 40.0)} "Original Number")
+             (text {:style (p/TextStyle .fontSize 40.0)} 
+                   "Original Number")
              (text {:style (p/TextStyle
                             .color m.Colors/green
-                            .fontSize 40.0)} "001")
-             (text {:style (p/TextStyle .fontSize 40.0)} "Binary Number")
+                            .fontSize 40.0)} (str original-number))
+             (text {:style (p/TextStyle .fontSize 40.0)} 
+                   "Shift Left << 1")
              (text {:style (p/TextStyle 
                             .color m.Colors/red
-                            .fontSize 40.0)} "002")
-             (text {:style (p/TextStyle .fontSize 40.0)} "Shifted Numbers")
-             (text {:style (p/TextStyle .fontSize 40.0)} "003")
+                            .fontSize 40.0)} (str second-number))
+             (text {:style (p/TextStyle .fontSize 40.0)} 
+                   "Shifted Numbers")
+             (text {:style (p/TextStyle .fontSize 40.0)} (str third-number))
              (sized-box {:height 14.0})
              (text
               {:style (in-my-context [me ctx]

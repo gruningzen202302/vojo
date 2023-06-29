@@ -10,8 +10,13 @@
 
 (def title-message "VOJO By QiMono")
 (def message "Bit Demo")
-(def original-number 2r100)
-(def second-number (bit-shift-left original-number 1))
+ (def raw "
+0 4 1 9 
+3 0 6 11 
+4 1 0 2 
+6 5 -4 0")
+(def original-number raw)
+(def second-number 2r100)
 (def third-number (bit-shift-left 1 16))
 (defn shift [x] (bit-shift-left x 1))
 
@@ -36,7 +41,7 @@
                                         .fontSize 40.0)}
                    message)
              (text {:style (p/TextStyle .fontSize 40.0)} 
-                   "Original Number")
+                   "Original Matrix")
              (text {:style (p/TextStyle
                             .color m.Colors/green
                             .fontSize 40.0)} (str original-number))
@@ -53,7 +58,7 @@
               {:style (in-my-context [me ctx]
                                      (.-headline4 (.-textTheme (m.Theme/of ctx))))}
               {:name  :z-counter
-               :value (cI 4)}
+               :value (cI 2r100)}
               (str (mx/my-value))))))))
 
 

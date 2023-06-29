@@ -8,7 +8,7 @@
             material-app scaffold app-bar floating-action-button
             center column text sized-box]]))
 
-(def title-message "VOJO by QiMono")
+(def title-message "VOJO By QiMono")
 (def message "Bit Demo")
 (def original-number 2r100)
 (def second-number (bit-shift-left original-number 1))
@@ -18,7 +18,8 @@
 (defn make-app []
   (material-app
    {:title "Flutter/MX Counter Demo"
-    :theme (m/ThemeData .primarySwatch m.Colors/amber)}
+    :theme (m/ThemeData .brightness m.Brightness/dark
+                        .primarySwatch m.Colors/blue)}
    (scaffold
     {:appBar
      (app-bar

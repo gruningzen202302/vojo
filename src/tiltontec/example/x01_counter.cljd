@@ -13,9 +13,7 @@
 (def original-number 2r100)
 (def second-number (bit-shift-left original-number 1))
 (def third-number (bit-shift-left 1 16))
-;(defn toBinaryString [n](Integer/toBinaryString n))
-;(toBinaryString original-number)
-;(Integer/toBinaryString original-number)
+(defn shift [x] (bit-shift-left x 1))
 
 (defn make-app []
   (material-app
@@ -28,7 +26,7 @@
      :floatingActionButton
      (cF (floating-action-button
           {:onPressed (as-dart-callback []
-                                        (mswap! (fm* :z-counter) :value inc))
+                                        (mswap! (fm* :z-counter) :value shift))
            :tooltip   "Increment"}
           (m/Icon m.Icons/add .color m.Colors/black)))}
     (center
@@ -54,7 +52,7 @@
               {:style (in-my-context [me ctx]
                                      (.-headline4 (.-textTheme (m.Theme/of ctx))))}
               {:name  :z-counter
-               :value (cI 0)}
+               :value (cI 4)}
               (str (mx/my-value))))))))
 
 

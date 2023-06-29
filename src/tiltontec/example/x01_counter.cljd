@@ -20,7 +20,7 @@
 (defn make-app []
   (material-app
    {:title "Flutter/MX Counter Demo"
-    :theme (m/ThemeData .primarySwatch m.Colors/blue)}
+    :theme (m/ThemeData .primarySwatch m.Colors/amber)}
    (scaffold
     {:appBar
      (app-bar

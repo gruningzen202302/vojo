@@ -21,7 +21,7 @@
 6 5 -4 0")
 (def lines (str/split-lines raw-line))
 (def original-number lines)
-(def second-number 2r100)
+(def second-number raw)
 (def third-number (bit-shift-left 1 16))
 (defn shift [x] (bit-shift-left x 1))
 
@@ -49,9 +49,9 @@
                    "Original Matrix")
              (text {:style (p/TextStyle
                             .color m.Colors/green
-                            .fontSize 40.0)} (str original-number))
+                            .fontSize 20.0)} (str original-number))
              (text {:style (p/TextStyle .fontSize 40.0)} 
-                   "Shift Left << 1")
+                   "Tabulated Matrix")
              (text {:style (p/TextStyle 
                             .color m.Colors/red
                             .fontSize 40.0)} (str second-number))

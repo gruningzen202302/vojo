@@ -1,5 +1,6 @@
 (ns tiltontec.example.x01-counter
   (:require
+   [clojure.string :as str]
    ["package:flutter/material.dart" :as m]
    ["package:flutter/painting.dart" :as p]
    [tiltontec.matrix.api :refer [cF cI cFn cFonce mpar mget mset! mswap! fm*] :as mx]
@@ -10,12 +11,16 @@
 
 (def title-message "VOJO By QiMono")
 (def message "Bit Demo")
- (def raw "
+
+(def raw-line "0 4 1 9 3 0 6 11 4 1 0 2 6 5 -4 0")
+
+(def raw "
 0 4 1 9 
 3 0 6 11 
 4 1 0 2 
 6 5 -4 0")
-(def original-number raw)
+(def lines (str/split-lines raw-line))
+(def original-number lines)
 (def second-number 2r100)
 (def third-number (bit-shift-left 1 16))
 (defn shift [x] (bit-shift-left x 1))

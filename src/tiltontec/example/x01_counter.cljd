@@ -1,6 +1,7 @@
 (ns tiltontec.example.x01-counter
   (:require
    [clojure.string :as str]
+   ;[net.mikera/core.matrix as mx]
    ["package:flutter/material.dart" :as m]
    ["package:flutter/painting.dart" :as p]
    [tiltontec.matrix.api :refer [cF cI cFn cFonce mpar mget mset! mswap! fm*] :as mx]
@@ -65,5 +66,9 @@
               {:name  :z-counter
                :value (cI 2r100)}
               (str (mx/my-value))))))))
+
+(comment
+  make-app
+  )
 
 

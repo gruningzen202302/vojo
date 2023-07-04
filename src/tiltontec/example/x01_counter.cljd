@@ -10,11 +10,26 @@
             material-app scaffold app-bar floating-action-button
             center column text sized-box]]))
 
+(def S 
+  ;starting node
+  0
+  )
+
+;; memo[i][1<< S]|1<<i = m[S][i]
+
 (def title-message "VOJO By QiMono")
-(def message "Bit Demo")
+
+(def first-message "Starting Node:")
+(def second-message "Lorem")
+(def third-message "Ipsum")
+(def fourth-message "Sit")
+
+(def number-first 0)
+(def number-second 2)
+(def number-third 3)
+(def number-fourth 4)
 
 (def raw-line "0 4 1 9 3 0 6 11 4 1 0 2 6 5 -4 0")
-
 (def raw "
 0 4 1 9 
 3 0 6 11 
@@ -45,20 +60,23 @@
      (column {:mainAxisAlignment m.MainAxisAlignment/center}
              (text {:style (p/TextStyle .color m.Colors/blue
                                         .fontSize 40.0)}
-                   message)
+                   first-message)
+             (text {:style (p/TextStyle
+                            .color m.Colors/blue
+                            .fontSize 20.0)} (str number-first))
              (text {:style (p/TextStyle .fontSize 40.0)} 
-                   "Original Matrix")
+                   second-message)
              (text {:style (p/TextStyle
                             .color m.Colors/green
-                            .fontSize 20.0)} (str original-number))
+                            .fontSize 20.0)} (str number-second))
              (text {:style (p/TextStyle .fontSize 40.0)} 
-                   "Tabulated Matrix")
+                   third-message)
              (text {:style (p/TextStyle 
                             .color m.Colors/red
-                            .fontSize 40.0)} (str second-number))
+                            .fontSize 40.0)} (str number-third))
              (text {:style (p/TextStyle .fontSize 40.0)} 
-                   "Shifted Numbers")
-             (text {:style (p/TextStyle .fontSize 40.0)} (str third-number))
+                   fourth-message)
+             (text {:style (p/TextStyle .fontSize 40.0)} (str number-fourth))
              (sized-box {:height 14.0})
              (text
               {:style (in-my-context [me ctx]

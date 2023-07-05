@@ -12,8 +12,10 @@
 
 (def S 
   ;starting node
-  0
-  )
+  0)
+(def i
+  ;iterator
+  0)
 
 ;; memo[i][1<< S]|1<<i = m[S][i]
 
@@ -25,6 +27,7 @@
 (def fourth-message "Sit")
 
 (def number-first 0)
+;(def starting-node 0)
 (def number-second 2)
 (def number-third 3)
 (def number-fourth 4)
@@ -40,6 +43,8 @@
 (def second-number raw)
 (def third-number (bit-shift-left 1 16))
 (defn shift [x] (bit-shift-left x 1))
+(defn plus [x] (+ x 1))
+(defn minus [x] (- x 1))
 
 (defn make-app []
   (material-app
@@ -53,7 +58,7 @@
      :floatingActionButton
      (cF (floating-action-button
           {:onPressed (as-dart-callback []
-                                        (mswap! (fm* :z-counter) :value shift))
+                                        (mswap! (fm* :z-counter) :value plus))
            :tooltip   "Increment"}
           (m/Icon m.Icons/add .color m.Colors/black)))}
     (center
@@ -82,7 +87,7 @@
               {:style (in-my-context [me ctx]
                                      (.-headline4 (.-textTheme (m.Theme/of ctx))))}
               {:name  :z-counter
-               :value (cI 2r100)}
+               :value (cI i)}
               (str (mx/my-value))))))))
 
 (comment

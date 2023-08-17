@@ -2,7 +2,8 @@
 - Objective Attending the "Traveling Salesman Person" problem using functinal programming
 
 ## Satellite projects
- 
+
+0. Setup: emacs REPL
 1. Middleware : ClojureScript		App: Console , graphQl	
 2. Frontend : ClojureDart		App: Mobile , Android IOs
 3. Bakend : Clojure			App: Console, Datomic
@@ -28,8 +29,9 @@
 
 ## Books
 1. Lisp
-2. graphQl
-3. Algebra
+2. NodeJs and MongDb
+3. graphQl
+4. Algebra
 
 ## Social Media
 1. Linkedin
